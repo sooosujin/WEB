@@ -6,16 +6,19 @@
   <link rel="stylesheet" href="style.css"
 </head>
 <body>
-  <h1><a href="index.html">WEB</a></H1>
-  <input type="button" value="night" onclick="
-  document.querySelector('body').style.backgroundColor='black';
-  document.querySelector('body').style.color='white';
+  <h1><a href="index.html">WEB</a></h1>
+  <input type="BUTTON" value="night"onclick="
+  var target = document.querySelector('body');
+  if(this.value === 'night'){
+    target.style.backgroundColor ='black';
+    target.style.color ='white';
+    this.value = 'day';
+  }  else {
+    target.style.backgroundColor ='white';
+    target.style.color ='black';
+    this.value = 'night';
+  }
   ">
-  <input type="button" value="day" onclick="
-  document.querySelector('body').style.backgroundColor='white';
-  document.querySelector('body').style.color='black';
-  ">
-
   <div id="grid">
     <ol>
       <li><a href="1.html">Html</a></li>
@@ -30,6 +33,18 @@
       JavaScript is easy to learn.
       This tutorial will teach you JavaScript from basic to advanced.
     </P>
+    <input type="BUTTON" value="night"onclick="
+    if(this.value === 'night'){
+      document.querySelector('body').style.backgroundColor ='black';
+      document.querySelector('body').style.color ='white';
+      this.value = 'day';
+    }  else {
+      document.querySelector('body').style.backgroundColor ='white';
+      document.querySelector('body').style.color ='black';
+      this.value = 'night';
+    }
+    ">
+
     </div>
   </div>
 </body>
