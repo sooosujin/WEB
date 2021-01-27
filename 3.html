@@ -4,32 +4,37 @@
   <title>WEB1-JavaScript</title>
   <meta charset="utf-8">
   <script>
+    function LinkssetColor(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = color;
+
+        i = i +1;
+      }
+    }
+    function BodysetColor(color){
+      document.querySelector('body').style.color = color;
+    }
+    function BodySetBackgroundColor(color){
+      document.querySelector('body').style.backgroundColor = color;
+    }
     function nightDayHandler(self){
       var target = document.querySelector('body');
       if(self.value === 'night'){
-        target.style.backgroundColor ='black';
-        target.style.color ='white';
+        Body.SetBackgroundColor('black');
+        Body.setColor('white');
         self.value = 'day';
 
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = 'powderblue';
+        Links.setColor('powderblue');
 
-          i = i +1;
-        }
       }  else {
-        target.style.backgroundColor ='white';
-        target.style.color ='black';
+        Body.SetBackgroundColor('white');
+        Body.setColor('black');
         self.value = 'night';
 
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = 'skyblue';
+      Links.setColor('skyblue');
 
-          i = i +1;
-        }
       }
     }
   </script>
